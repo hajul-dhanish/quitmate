@@ -56,7 +56,7 @@ class _MorePageState extends State<MorePage> {
 
   @override
   Widget build(BuildContext context) {
-    const String pageTitle = "Personal";
+    const String pageTitle = "Config";
 
     // Size Assets
     final double screenWidth = MediaQuery.of(context).size.width;
