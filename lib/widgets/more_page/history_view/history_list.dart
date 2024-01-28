@@ -31,6 +31,7 @@ class HistoryList extends StatelessWidget {
       // alignment: Alignment.topCenter,
       child: items.isNotEmpty
           ? ListView.builder(
+              shrinkWrap: true,
               itemCount: items.length,
               controller: scrollController,
               padding: EdgeInsets.zero,
@@ -47,12 +48,12 @@ class HistoryList extends StatelessWidget {
           : Align(
               alignment: const Alignment(0, -0.7),
               child: Text(
-                "No cigarettes\nsmoked today",
+                "No cigarettes smoked today",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   color: text,
                   fontWeight: FontWeight.w400,
-                  fontSize: 18,
+                  fontSize: 14,
                 ),
               ),
             ),

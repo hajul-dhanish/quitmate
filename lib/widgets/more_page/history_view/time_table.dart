@@ -40,7 +40,7 @@ class TimeTable extends StatelessWidget {
 
     return Container(
       width: width,
-      height: list.isNotEmpty ? height : height * 0.6,
+      height: list.isNotEmpty ? height : height * 0.4,
       decoration: BoxDecoration(
         color: background,
         borderRadius: BorderRadius.only(
@@ -51,19 +51,21 @@ class TimeTable extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10),
       child: Column(
         children: [
-          Text(
-            "History",
-            style: GoogleFonts.poppins(
-              color: text,
-              fontSize: 28,
-              fontWeight: FontWeight.w500,
+          if (list.isNotEmpty)
+            Text(
+              "History",
+              style: GoogleFonts.poppins(
+                color: text,
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
+              ),
             ),
-          ),
-          TableDivider(
-            width: width * dividerWidthMultiplier,
-            height: height * dividerHeightMultiplier,
-            color: divider,
-          ),
+          if (list.isNotEmpty)
+            TableDivider(
+              width: width * dividerWidthMultiplier,
+              height: height * dividerHeightMultiplier,
+              color: divider,
+            ),
           SizedBox(height: height * space),
           HistoryList(
             width: width * listWidthMultiplier,
