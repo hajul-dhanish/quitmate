@@ -89,6 +89,7 @@ class HomePageState extends State<HomePage> {
           width: width,
           height: height,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               PageTitle(
                 width: width,
@@ -101,7 +102,6 @@ class HomePageState extends State<HomePage> {
                   amoled: CColors.lightGrey,
                 ),
               ),
-              SizedBox(height: height * 0.016),
               Stats(
                 key: statsState,
                 width: width,
@@ -126,7 +126,6 @@ class HomePageState extends State<HomePage> {
                   amoled: CColors.dark,
                 ),
               ),
-              SizedBox(height: height * 0.030),
               Counter(
                 key: counterkey,
                 countController: widget.countController,
@@ -147,7 +146,6 @@ class HomePageState extends State<HomePage> {
                     dark: CColors.lightGrey,
                     amoled: CColors.darkGrey),
               ),
-              SizedBox(height: height * 0.025),
               Calendar(
                 key: calendarkey,
                 width: calendarWidth,
@@ -192,7 +190,6 @@ class HomePageState extends State<HomePage> {
                   amoled: CColors.darkGrey,
                 ),
               ),
-              SizedBox(height: height * 0.04),
               Button(
                 width: buttonWidth,
                 height: buttonHeight,
@@ -231,6 +228,7 @@ class HomePageState extends State<HomePage> {
                   calendarkey.currentState!.refresh();
                 },
               ),
+              const SizedBox(height: 10),
             ],
           ),
         ),

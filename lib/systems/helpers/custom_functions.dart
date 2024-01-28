@@ -4,9 +4,11 @@ import 'package:quitmate/systems/data_controller.dart';
 String timetoString(DateTime dateTime, {clear = false}) {
   int hour = dateTime.hour;
   int minute = dateTime.minute;
+  int second = dateTime.second;
 
   String strHour = hour.toString();
   String strMinute = minute.toString();
+  String strSecond = second.toString();
 
   if (hour < 10) {
     strHour = "0$strHour";
@@ -14,11 +16,14 @@ String timetoString(DateTime dateTime, {clear = false}) {
   if (minute < 10) {
     strMinute = "0$strMinute";
   }
+  if (second < 10) {
+    strSecond = "0$strSecond";
+  }
 
   if (clear) {
-    return "$strHour$strMinute";
+    return "$strHour$strMinute:$strSecond";
   }
-  return "$strHour:$strMinute";
+  return "$strHour:$strMinute:$strSecond";
 }
 
 String datetoString(DateTime dateTime, {clean = false}) {
