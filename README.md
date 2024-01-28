@@ -1,3 +1,5 @@
+This project was inspired by **alexbogdos's** work at https://github.com/alexbogdos/Smoking-Regulator-v2.
+
 # Smoking-Regulator-v2
 
  A Flutter app to monitor the user's smoking habits to help regulate them.
