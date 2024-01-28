@@ -1,12 +1,12 @@
 import 'package:bottom_picker/bottom_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smoking_regulator_v2/systems/count_controller.dart';
-import 'package:smoking_regulator_v2/systems/helpers/custom_colors.dart';
-import 'package:smoking_regulator_v2/systems/helpers/custom_functions.dart';
-import 'package:smoking_regulator_v2/widgets/more_page/settings_toggles/input_settings_togle.dart';
-import 'package:smoking_regulator_v2/widgets/more_page/settings_toggles/settings_togle.dart';
-import 'package:smoking_regulator_v2/widgets/more_page/history_view/time_table.dart';
+import 'package:quitmate/systems/count_controller.dart';
+import 'package:quitmate/systems/helpers/custom_colors.dart';
+import 'package:quitmate/systems/helpers/custom_functions.dart';
+import 'package:quitmate/widgets/more_page/settings_toggles/input_settings_togle.dart';
+import 'package:quitmate/widgets/more_page/settings_toggles/settings_togle.dart';
+import 'package:quitmate/widgets/more_page/history_view/time_table.dart';
 
 class MorePage extends StatefulWidget {
   const MorePage({
@@ -56,7 +56,7 @@ class _MorePageState extends State<MorePage> {
 
   @override
   Widget build(BuildContext context) {
-    const String pageTitle = "More";
+    const String pageTitle = "Personal";
 
     // Size Assets
     final double screenWidth = MediaQuery.of(context).size.width;
@@ -85,6 +85,17 @@ class _MorePageState extends State<MorePage> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        elevation: 0.0,
+        toolbarHeight: 0.0,
+        backgroundColor: getColor(
+          colorMode: widget.colorMode,
+          isAmoled: widget.isAmoled,
+          light: CColors.lightGrey,
+          dark: CColors.dark,
+          amoled: CColors.black,
+        ),
+      ),
       backgroundColor: getColor(
         colorMode: widget.colorMode,
         isAmoled: widget.isAmoled,

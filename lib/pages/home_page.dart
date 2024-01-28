@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:smoking_regulator_v2/systems/calendar_controller.dart';
-import 'package:smoking_regulator_v2/systems/count_controller.dart';
-import 'package:smoking_regulator_v2/systems/helpers/custom_colors.dart';
-import 'package:smoking_regulator_v2/systems/data_controller.dart';
-import 'package:smoking_regulator_v2/widgets/home_page/counter/button.dart';
-import 'package:smoking_regulator_v2/widgets/home_page/calendar/calendar.dart';
-import 'package:smoking_regulator_v2/widgets/home_page/counter/counter.dart';
-import 'package:smoking_regulator_v2/widgets/home_page/stats/stats.dart';
-import 'package:smoking_regulator_v2/widgets/shared/title.dart';
+import 'package:quitmate/systems/calendar_controller.dart';
+import 'package:quitmate/systems/count_controller.dart';
+import 'package:quitmate/systems/helpers/custom_colors.dart';
+import 'package:quitmate/systems/data_controller.dart';
+import 'package:quitmate/widgets/home_page/counter/button.dart';
+import 'package:quitmate/widgets/home_page/calendar/calendar.dart';
+import 'package:quitmate/widgets/home_page/counter/counter.dart';
+import 'package:quitmate/widgets/home_page/stats/stats.dart';
+import 'package:quitmate/widgets/shared/title.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -64,6 +64,17 @@ class HomePageState extends State<HomePage> {
     final String colorMode = widget.colorMode;
     final bool isAmoled = widget.isAmoled;
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        toolbarHeight: 0.0,
+        backgroundColor: getColor(
+          colorMode: widget.colorMode,
+          isAmoled: widget.isAmoled,
+          light: CColors.lightGrey,
+          dark: CColors.dark,
+          amoled: CColors.black,
+        ),
+      ),
       resizeToAvoidBottomInset: false,
       backgroundColor: getColor(
         colorMode: colorMode,

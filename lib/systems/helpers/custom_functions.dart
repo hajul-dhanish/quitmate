@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:smoking_regulator_v2/systems/data_controller.dart';
+import 'package:quitmate/systems/data_controller.dart';
 
 String timetoString(DateTime dateTime, {clear = false}) {
   int hour = dateTime.hour;

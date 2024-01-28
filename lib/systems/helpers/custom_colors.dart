@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smoking_regulator_v2/systems/helpers/custom_functions.dart';
+import 'package:quitmate/systems/helpers/custom_functions.dart';
 
 class CColors {
   static const Color white = Color.fromARGB(255, 255, 255, 255);

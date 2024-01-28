@@ -1,6 +1,6 @@
 {
-    "name": "smoking_regulator_v2",
-    "short_name": "smoking_regulator_v2",
+    "name": "quitmate",
+    "short_name": "quitmate",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

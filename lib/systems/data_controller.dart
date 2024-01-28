@@ -1,5 +1,5 @@
-import 'package:smoking_regulator_v2/systems/helpers/custom_functions.dart';
-import 'package:smoking_regulator_v2/systems/save_system.dart';
+import 'package:quitmate/systems/helpers/custom_functions.dart';
+import 'package:quitmate/systems/save_system.dart';
 
 class DataController {
   late Map<String, dynamic> data = {};

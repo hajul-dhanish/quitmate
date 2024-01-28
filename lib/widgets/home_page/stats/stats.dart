@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:smoking_regulator_v2/systems/calendar_controller.dart';
-import 'package:smoking_regulator_v2/systems/data_controller.dart';
-import 'package:smoking_regulator_v2/widgets/home_page/stats/info_tab.dart';
-import 'package:smoking_regulator_v2/widgets/home_page/stats/selectable_chip.dart';
+import 'package:quitmate/systems/calendar_controller.dart';
+import 'package:quitmate/systems/data_controller.dart';
+import 'package:quitmate/widgets/home_page/stats/info_tab.dart';
+import 'package:quitmate/widgets/home_page/stats/selectable_chip.dart';
 
 class Stats extends StatefulWidget {
   const Stats({

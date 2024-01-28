@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smoking_regulator_v2/systems/count_controller.dart';
-import 'package:smoking_regulator_v2/systems/data_controller.dart';
+import 'package:quitmate/systems/count_controller.dart';
+import 'package:quitmate/systems/data_controller.dart';
 
 class Counter extends StatefulWidget {
   const Counter({

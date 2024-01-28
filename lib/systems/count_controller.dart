@@ -1,5 +1,5 @@
-import 'package:smoking_regulator_v2/systems/helpers/custom_functions.dart';
-import 'package:smoking_regulator_v2/systems/data_controller.dart';
+import 'package:quitmate/systems/helpers/custom_functions.dart';
+import 'package:quitmate/systems/data_controller.dart';
 
 Map<int, String> dayNames = {
   1: "Monday",

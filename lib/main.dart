@@ -3,13 +3,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:smoking_regulator_v2/systems/calendar_controller.dart';
-import 'package:smoking_regulator_v2/systems/count_controller.dart';
-import 'package:smoking_regulator_v2/systems/helpers/custom_colors.dart';
-import 'package:smoking_regulator_v2/pages/more_page.dart';
-import 'package:smoking_regulator_v2/pages/home_page.dart';
-import 'package:smoking_regulator_v2/systems/helpers/custom_functions.dart';
-import 'package:smoking_regulator_v2/systems/data_controller.dart';
+import 'package:quitmate/systems/calendar_controller.dart';
+import 'package:quitmate/systems/count_controller.dart';
+import 'package:quitmate/systems/helpers/custom_colors.dart';
+import 'package:quitmate/pages/more_page.dart';
+import 'package:quitmate/pages/home_page.dart';
+import 'package:quitmate/systems/helpers/custom_functions.dart';
+import 'package:quitmate/systems/data_controller.dart';
 
 void main() {
   runApp(const MaterialApp(

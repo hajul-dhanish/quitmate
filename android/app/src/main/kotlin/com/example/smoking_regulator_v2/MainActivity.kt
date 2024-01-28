@@ -1,4 +1,4 @@
-package com.example.smoking_regulator_v2
+package com.tsukiyomi.quitmate
 
 import io.flutter.embedding.android.FlutterActivity
 
