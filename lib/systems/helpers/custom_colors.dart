@@ -54,7 +54,7 @@ String cycleColorMode({required String colorMode}) {
   if (colorMode == "Light") {
     return "Dark";
   } else if (colorMode == "Dark") {
-    return "Cycle";
+    return "Light";
   } else {
     return "Light";
   }
