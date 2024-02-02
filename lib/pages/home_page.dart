@@ -8,6 +8,7 @@ import 'package:quitmate/widgets/home_page/calendar/calendar.dart';
 import 'package:quitmate/widgets/home_page/counter/counter.dart';
 import 'package:quitmate/widgets/home_page/stats/stats.dart';
 import 'package:quitmate/widgets/shared/title.dart';
+import '../widgets/textWidget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -34,6 +35,58 @@ class HomePageState extends State<HomePage> {
   final GlobalKey<CounterState> counterkey = GlobalKey();
   final GlobalKey<CalendarState> calendarkey = GlobalKey();
   final GlobalKey<StatsState> statsState = GlobalKey();
+  String smokeStreak = "null";
+
+  void resetCounter() {
+    setState(() {
+      smokeStreak = "null";
+    });
+  }
+
+  String lastSmokedPeriod(DateTime lastSmoked) {
+    String lastSmokedStr = "null";
+
+    String smkdInDays = DateTime.now().difference(lastSmoked).inDays.toString();
+    String smkdInHours =
+        DateTime.now().difference(lastSmoked).inHours.toString();
+    String smkdInMinutes =
+        DateTime.now().difference(lastSmoked).inMinutes.toString();
+    String smkdInSeconds =
+        DateTime.now().difference(lastSmoked).inSeconds.toString();
+
+    if (smkdInDays != "0") {
+      lastSmokedStr = "$smkdInDays Days";
+    } else if (smkdInHours != "0") {
+      lastSmokedStr = "$smkdInHours hours";
+    } else if (smkdInMinutes != "0") {
+      lastSmokedStr = "$smkdInMinutes Minutes";
+    } else {
+      lastSmokedStr = "$smkdInSeconds Seconds";
+    }
+    return lastSmokedStr;
+  }
+
+  void getCounter() {
+    setState(() {
+      if (widget.calendarController.week.values.last["Time Table"].toString() !=
+          "[]") {
+        if (widget.calendarController.week.values.last["Time Table"].last !=
+            null) {
+          DateTime lastSmoked = DateTime.parse(widget
+                  .calendarController.week.values.last["Date"] +
+              " " +
+              widget.calendarController.week.values.last["Time Table"].last);
+          smokeStreak = lastSmokedPeriod(lastSmoked);
+        }
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    getCounter();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -190,6 +243,18 @@ class HomePageState extends State<HomePage> {
                   amoled: CColors.darkGrey,
                 ),
               ),
+              if (smokeStreak != "null")
+                InkWell(
+                  onTap: () {
+                    getCounter();
+                  },
+                  child: textWidget(
+                      title: "Smoke Streak : $smokeStreak",
+                      colorMode: widget.colorMode,
+                      isAmoled: widget.isAmoled,
+                      active: true,
+                      fontSize: 10.0),
+                ),
               Button(
                 width: buttonWidth,
                 height: buttonHeight,
@@ -215,11 +280,13 @@ class HomePageState extends State<HomePage> {
                   amoled: CColors.lightGrey,
                 ),
                 increase: () {
+                  getCounter();
                   widget.countController.increase();
                   counterkey.currentState!.refresh();
                   statsState.currentState!.refresh();
                 },
                 decrease: () {
+                  resetCounter();
                   widget.countController.decrease();
                   counterkey.currentState!.refresh();
                   statsState.currentState!.refresh();
