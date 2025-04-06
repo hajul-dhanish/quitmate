@@ -15,7 +15,7 @@ class PageTitle extends StatelessWidget {
 
   final String text1 = "Keep Healthy";
   final String text2 = "Regulate Smoking";
-  final double size = 34;
+  final double size = 24;
 
   @override
   Widget build(BuildContext context) {

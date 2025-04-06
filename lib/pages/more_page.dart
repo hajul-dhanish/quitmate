@@ -270,141 +270,141 @@ class _MorePageState extends State<MorePage> {
 
   void showBottomPickerSunSetTime(
       {required BuildContext context, required List<int> initialTime}) {
-    BottomPicker.time(
-      title: "The hour at which the sun sets:",
-      //                         ..., hour, minutes)
-      initialDateTime: DateTime(
-        0,
-        0,
-        0,
-        initialTime[0],
-        initialTime[1],
-      ),
-      titleStyle: GoogleFonts.poppins(
-        color: getColor(
-          colorMode: widget.colorMode,
-          isAmoled: widget.isAmoled,
-          light: CColors.dark,
-          dark: CColors.white,
-          amoled: CColors.white,
-        ),
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-      ),
-      use24hFormat: true,
-      pickerTextStyle: GoogleFonts.poppins(
-        color: getColor(
-          colorMode: widget.colorMode,
-          isAmoled: widget.isAmoled,
-          light: CColors.dark,
-          dark: CColors.white,
-          amoled: CColors.white,
-        ),
-        fontSize: 14,
-        fontWeight: FontWeight.w300,
-      ),
-      closeIconColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.dark,
-        dark: CColors.white,
-        amoled: CColors.lightGrey,
-      ),
-      iconColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.white,
-        dark: CColors.dark,
-        amoled: CColors.black,
-      ),
-      backgroundColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.white,
-        dark: CColors.dark,
-        amoled: Color.lerp(CColors.dark, CColors.black, 0.6) as Color,
-      ),
-      buttonSingleColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.dark,
-        dark: CColors.white,
-        amoled: CColors.lightGrey,
-      ),
-      onSubmit: (p1) {
-        final String value = timetoString(p1);
-        setSunSetTime(value: value);
-      },
-    ).show(context);
+    // BottomPicker.time(
+    //   // title: "The hour at which the sun sets:",
+    //   //                         ..., hour, minutes)
+    //   initialDateTime: DateTime(
+    //     0,
+    //     0,
+    //     0,
+    //     initialTime[0],
+    //     initialTime[1],
+    //   ),
+    //   titleStyle: GoogleFonts.poppins(
+    //     color: getColor(
+    //       colorMode: widget.colorMode,
+    //       isAmoled: widget.isAmoled,
+    //       light: CColors.dark,
+    //       dark: CColors.white,
+    //       amoled: CColors.white,
+    //     ),
+    //     fontSize: 14,
+    //     fontWeight: FontWeight.w400,
+    //   ),
+    //   use24hFormat: true,
+    //   pickerTextStyle: GoogleFonts.poppins(
+    //     color: getColor(
+    //       colorMode: widget.colorMode,
+    //       isAmoled: widget.isAmoled,
+    //       light: CColors.dark,
+    //       dark: CColors.white,
+    //       amoled: CColors.white,
+    //     ),
+    //     fontSize: 14,
+    //     fontWeight: FontWeight.w300,
+    //   ),
+    //   closeIconColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.dark,
+    //     dark: CColors.white,
+    //     amoled: CColors.lightGrey,
+    //   ),
+    //   iconColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.white,
+    //     dark: CColors.dark,
+    //     amoled: CColors.black,
+    //   ),
+    //   backgroundColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.white,
+    //     dark: CColors.dark,
+    //     amoled: Color.lerp(CColors.dark, CColors.black, 0.6) as Color,
+    //   ),
+    //   buttonSingleColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.dark,
+    //     dark: CColors.white,
+    //     amoled: CColors.lightGrey,
+    //   ),
+    //   onSubmit: (p1) {
+    //     final String value = timetoString(p1);
+    //     setSunSetTime(value: value);
+    //   },
+    // ).show(context);
   }
 
   void showBottomPickerFactoredTime(
       {required BuildContext context, required List<int> initialTime}) {
-    BottomPicker.time(
-      title: "The hour at which the day changes:",
-      //                         ..., hour, minutes)
-      initialDateTime: DateTime(
-        0,
-        0,
-        0,
-        initialTime[0],
-        initialTime[1],
-      ),
-      titleStyle: GoogleFonts.poppins(
-        color: getColor(
-          colorMode: widget.colorMode,
-          isAmoled: widget.isAmoled,
-          light: CColors.dark,
-          dark: CColors.white,
-          amoled: CColors.white,
-        ),
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-      ),
-      use24hFormat: true,
-      pickerTextStyle: GoogleFonts.poppins(
-        color: getColor(
-          colorMode: widget.colorMode,
-          isAmoled: widget.isAmoled,
-          light: CColors.dark,
-          dark: CColors.white,
-          amoled: CColors.white,
-        ),
-        fontSize: 14,
-        fontWeight: FontWeight.w300,
-      ),
-      closeIconColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.dark,
-        dark: CColors.white,
-        amoled: CColors.lightGrey,
-      ),
-      iconColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.white,
-        dark: CColors.dark,
-        amoled: CColors.black,
-      ),
-      backgroundColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.white,
-        dark: CColors.dark,
-        amoled: Color.lerp(CColors.dark, CColors.black, 0.6) as Color,
-      ),
-      buttonSingleColor: getColor(
-        colorMode: widget.colorMode,
-        isAmoled: widget.isAmoled,
-        light: CColors.dark,
-        dark: CColors.white,
-        amoled: CColors.lightGrey,
-      ),
-      onSubmit: (p0) {
-        final String value = p0.toString().substring(12, 17);
-        setFactoredTime(value: value);
-      },
-    ).show(context);
+    // BottomPicker.time(
+    //   title: "The hour at which the day changes:",
+    //   //                         ..., hour, minutes)
+    //   initialDateTime: DateTime(
+    //     0,
+    //     0,
+    //     0,
+    //     initialTime[0],
+    //     initialTime[1],
+    //   ),
+    //   titleStyle: GoogleFonts.poppins(
+    //     color: getColor(
+    //       colorMode: widget.colorMode,
+    //       isAmoled: widget.isAmoled,
+    //       light: CColors.dark,
+    //       dark: CColors.white,
+    //       amoled: CColors.white,
+    //     ),
+    //     fontSize: 14,
+    //     fontWeight: FontWeight.w400,
+    //   ),
+    //   use24hFormat: true,
+    //   pickerTextStyle: GoogleFonts.poppins(
+    //     color: getColor(
+    //       colorMode: widget.colorMode,
+    //       isAmoled: widget.isAmoled,
+    //       light: CColors.dark,
+    //       dark: CColors.white,
+    //       amoled: CColors.white,
+    //     ),
+    //     fontSize: 14,
+    //     fontWeight: FontWeight.w300,
+    //   ),
+    //   closeIconColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.dark,
+    //     dark: CColors.white,
+    //     amoled: CColors.lightGrey,
+    //   ),
+    //   iconColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.white,
+    //     dark: CColors.dark,
+    //     amoled: CColors.black,
+    //   ),
+    //   backgroundColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.white,
+    //     dark: CColors.dark,
+    //     amoled: Color.lerp(CColors.dark, CColors.black, 0.6) as Color,
+    //   ),
+    //   buttonSingleColor: getColor(
+    //     colorMode: widget.colorMode,
+    //     isAmoled: widget.isAmoled,
+    //     light: CColors.dark,
+    //     dark: CColors.white,
+    //     amoled: CColors.lightGrey,
+    //   ),
+    //   onSubmit: (p0) {
+    //     final String value = p0.toString().substring(12, 17);
+    //     setFactoredTime(value: value);
+    //   },
+    // ).show(context);
   }
 }

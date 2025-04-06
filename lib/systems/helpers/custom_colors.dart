@@ -32,19 +32,22 @@ Color getColor({
     } else {
       return dark.withOpacity(opacity ?? 1);
     }
-  } else if (colorMode == "Cycle") {
-    final int timenow = int.parse(timetoString(DateTime.now(), clear: true));
-    log(title: "Custom Colors (getColor)", value: "$timenow  $sunSetTime");
-    if (min <= timenow && timenow < sunSetTime) {
-      return light.withOpacity(opacity ?? 1);
-    } else {
-      if (isAmoled == true) {
-        return amoled.withOpacity(opacity ?? 1);
-      } else {
-        return dark.withOpacity(opacity ?? 1);
-      }
-    }
-  } else {
+  }
+  // else if (colorMode == "Cycle") {
+  //   final int timenow =
+  //       int.tryParse(timetoString(DateTime.now(), clear: true)) ?? 0;
+  //   log(title: "Custom Colors (getColor)", value: "$timenow  $sunSetTime");
+  //   if (min <= timenow && timenow < sunSetTime) {
+  //     return light.withOpacity(opacity ?? 1);
+  //   } else {
+  //     if (isAmoled == true) {
+  //       return amoled.withOpacity(opacity ?? 1);
+  //     } else {
+  //       return dark.withOpacity(opacity ?? 1);
+  //     }
+  //   }
+  // }
+  else {
     return light.withOpacity(opacity ?? 1);
   }
 }

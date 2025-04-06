@@ -78,12 +78,12 @@ class _MainPageState extends State<MainPage> {
   }
 
   Future<void> grantPermissions() async {
-    if (Platform.isAndroid) {
-      bool granted = await Permission.manageExternalStorage.request().isGranted;
-      while (!granted) {
-        granted = await Permission.manageExternalStorage.request().isGranted;
-      }
-    }
+    // if (Platform.isAndroid) {
+    //   bool granted = await Permission.manageExternalStorage.request().isGranted;
+    //   while (!granted) {
+    //     granted = await Permission.manageExternalStorage.request().isGranted;
+    //   }
+    // }
   }
 
   void changeColorMode() {

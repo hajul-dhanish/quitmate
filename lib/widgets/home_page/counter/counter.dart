@@ -79,7 +79,7 @@ class CounterState extends State<Counter> {
                           const Color(0xFFFF5252)
                         ],
                       ),
-                      fontSize: 56,
+                      fontSize: 46,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
